@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_depedencias/page/basico/basico_home_page.dart';
 import 'package:get_depedencias/page/home_page.dart';
+import 'package:get_depedencias/page/metodos/lazyPut/lazy_put_page.dart';
 import 'package:get_depedencias/page/metodos/metodos_home_page.dart';
 import 'package:get_depedencias/page/metodos/put/put_page.dart';
 
@@ -29,7 +30,14 @@ class MyApp extends StatelessWidget {
           name: '/metodos',
           page: () => const MetodosHomePage(),
           children: [
-            GetPage(name: '/put', page: () => const PutPage()),
+            GetPage(
+              name: '/put',
+              page: () => const PutPage(),
+            ),
+            GetPage(
+              name: '/lazy-put',
+              page: () => LazyPutPage(),
+            ),
           ],
         ),
       ],

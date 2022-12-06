@@ -10,10 +10,15 @@ class MetodosHomePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             ElevatedButton(
               child: const Text('Put'),
               onPressed: () => Navigator.of(context).pushNamed('/metodos/put'),
+            ),
+            ElevatedButton(
+              child: const Text('Lazy Put'),
+              onPressed: () => Navigator.of(context).pushNamed('/metodos/lazy-put'),
             ),
           ],
         ),
