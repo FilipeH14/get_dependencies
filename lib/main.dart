@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_depedencias/page/basico/basico_home_page.dart';
 import 'package:get_depedencias/page/home_page.dart';
+import 'package:get_depedencias/page/metodos/create/create_home_page.dart';
 import 'package:get_depedencias/page/metodos/lazyPut/lazy_put_page.dart';
 import 'package:get_depedencias/page/metodos/metodos_home_page.dart';
 import 'package:get_depedencias/page/metodos/put/put_page.dart';
@@ -42,6 +43,10 @@ class MyApp extends StatelessWidget {
             GetPage(
               name: '/async-put',
               page: () => PutAsyncPage(),
+            ),
+            GetPage(
+              name: '/create',
+              page: () => CreateHomePage(),
             ),
           ],
         ),
