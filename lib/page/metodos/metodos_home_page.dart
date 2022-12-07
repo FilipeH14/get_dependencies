@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MetodosHomePage extends StatelessWidget {
   const MetodosHomePage({Key? key}) : super(key: key);
@@ -29,6 +30,14 @@ class MetodosHomePage extends StatelessWidget {
               ElevatedButton(
                 child: const Text('create'),
                 onPressed: () => Navigator.of(context).pushNamed('/metodos/create'),
+              ),
+              ElevatedButton(
+                child: const Text('update'),
+                onPressed: () => Navigator.of(context).pushNamed('/metodos/update'),
+              ),
+              ElevatedButton(
+                child: const Text('indo paradelete'),
+                onPressed: () => Get.offNamed('/metodos/delete'),
               ),
             ],
           ),

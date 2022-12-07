@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:get_depedencias/page/basico/basico_home_page.dart';
 import 'package:get_depedencias/page/home_page.dart';
 import 'package:get_depedencias/page/metodos/create/create_home_page.dart';
+import 'package:get_depedencias/page/metodos/delete_update/delete_page.dart';
+import 'package:get_depedencias/page/metodos/delete_update/update_home_page.dart';
 import 'package:get_depedencias/page/metodos/lazyPut/lazy_put_page.dart';
 import 'package:get_depedencias/page/metodos/metodos_home_page.dart';
 import 'package:get_depedencias/page/metodos/put/put_page.dart';
@@ -47,6 +49,14 @@ class MyApp extends StatelessWidget {
             GetPage(
               name: '/create',
               page: () => CreateHomePage(),
+            ),
+            GetPage(
+              name: '/update',
+              page: () => UpdateHomePage(),
+            ),
+            GetPage(
+              name: '/delete',
+              page: () => DeletePage(),
             ),
           ],
         ),
