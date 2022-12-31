@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -30,6 +31,10 @@ class HomePage extends StatelessWidget {
             TextButton(
               child: const Text('Bindings Builder Put'),
               onPressed: () => Navigator.of(context).pushNamed('/bindings_builder_put'),
+            ),
+            TextButton(
+              child: const Text('Initial Bindings'),
+              onPressed: () => Get.toNamed('/initial_bindings'),
             ),
           ],
         ),

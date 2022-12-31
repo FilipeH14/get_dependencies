@@ -5,6 +5,8 @@ import 'package:get_depedencias/page/bindings/bindings_controller.dart';
 import 'package:get_depedencias/page/bindings/bindings_exemple.dart';
 import 'package:get_depedencias/page/bindings/home_bindings.dart';
 import 'package:get_depedencias/page/home_page.dart';
+import 'package:get_depedencias/page/initial_bindings/initial_bindings_page.dart';
+import 'package:get_depedencias/page/initial_bindings/initial_bindins.dart';
 import 'package:get_depedencias/page/metodos/create/create_home_page.dart';
 import 'package:get_depedencias/page/metodos/delete_update/delete_page.dart';
 import 'package:get_depedencias/page/metodos/delete_update/update_home_page.dart';
@@ -24,6 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: InitialBindins(),
       getPages: [
         GetPage(
           name: '/',
@@ -84,6 +87,10 @@ class MyApp extends StatelessWidget {
           binding: BindingsBuilder.put(() =>
               BindingsController(nome: 'Inicializado dentro do bindings')),
           page: () => const HomeBindings(),
+        ),
+        GetPage(
+          name: '/initial_bindings',
+          page: () => const InitialBindingsPage(),
         ),
       ],
     );
